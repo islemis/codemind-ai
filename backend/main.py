@@ -2,8 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 from backend.local_project_service import load_local_project
-from backend.code_analyzer import analyze_repository
-
+from backend.analyzers.tree_sitter_analyzer import analyze_repository
 
 app = FastAPI(title="CodeMind AI")
 
