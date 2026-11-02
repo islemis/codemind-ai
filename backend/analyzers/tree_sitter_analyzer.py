@@ -11,6 +11,29 @@ IGNORED_DIRS = {
 }
 
 
+def get_node_name(node, source):
+    name_node = node.child_by_field_name("name")
+
+    if name_node:
+        return source[
+            name_node.start_byte:name_node.end_byte
+        ].decode("utf-8", errors="replace")
+
+    return None
+
+
+def get_parent_class(node, source):
+    parent = node.parent
+
+    while parent:
+        if parent.type in {"class_definition", "class_declaration"}:
+            return get_node_name(parent, source)
+
+        parent = parent.parent
+
+    return None
+
+
 def analyze_repository(project_path: str):
     root = Path(project_path).resolve()
     components = []
@@ -21,6 +44,7 @@ def analyze_repository(project_path: str):
 
         relative_path = file_path.relative_to(root)
 
+        # Skip generated and dependency directories
         if any(part in IGNORED_DIRS for part in relative_path.parts):
             continue
 
@@ -37,7 +61,6 @@ def analyze_repository(project_path: str):
             parser = get_parser(language)
             tree = parser.parse(source)
 
-            # Traverse the syntax tree
             stack = [tree.root_node]
 
             while stack:
@@ -45,16 +68,35 @@ def analyze_repository(project_path: str):
                 component_type = NODE_TYPES[language].get(node.type)
 
                 if component_type:
-                    name_node = node.child_by_field_name("name")
+                    name = get_node_name(node, source)
+                    parent_class = get_parent_class(node, source)
 
-                    name = (
-                        source[name_node.start_byte:name_node.end_byte]
-                        .decode("utf-8", errors="replace")
-                        if name_node else None
-                    )
+                    # Identify Python methods inside classes
+                    if (
+                        language == "python"
+                        and component_type == "function"
+                        and parent_class
+                    ):
+                        component_type = "method"
+
+                    # Use the full syntax node range
+                    start_byte = node.start_byte
+                    end_byte = node.end_byte
+                    end_line = node.end_point.row + 1
+
+                    # Include the complete Python class body
+                    if (
+                        language == "python"
+                        and node.type == "class_definition"
+                    ):
+                        body = node.child_by_field_name("body")
+
+                        if body and body.end_byte > end_byte:
+                            end_byte = body.end_byte
+                            end_line = body.end_point.row + 1
 
                     code = source[
-                        node.start_byte:node.end_byte
+                        start_byte:end_byte
                     ].decode("utf-8", errors="replace")
 
                     components.append({
@@ -62,8 +104,9 @@ def analyze_repository(project_path: str):
                         "language": language,
                         "name": name,
                         "type": component_type,
+                        "parent_class": parent_class,
                         "start_line": node.start_point.row + 1,
-                        "end_line": node.end_point.row + 1,
+                        "end_line": end_line,
                         "code": code,
                     })
 
