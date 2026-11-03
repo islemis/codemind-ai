@@ -3,7 +3,7 @@ from pathlib import Path
 from tree_sitter_language_pack import get_parser
 
 from backend.analyzers.language_config import LANGUAGES, NODE_TYPES
-
+from backend.analyzers.file_scanner import scan_project_files
 
 IGNORED_DIRS = {
     ".git", ".venv", "venv", "node_modules",
@@ -37,8 +37,7 @@ def get_parent_class(node, source):
 def analyze_repository(project_path: str):
     root = Path(project_path).resolve()
     components = []
-
-    for file_path in root.rglob("*"):
+    for file_path in scan_project_files(root):
         if not file_path.is_file():
             continue
 

@@ -38,5 +38,6 @@ NODE_TYPES = {
         "constructor_declaration": "constructor",
         "class_declaration": "class",
         "import_declaration": "import",
+        "interface_declaration": "interface",
     },
 }
