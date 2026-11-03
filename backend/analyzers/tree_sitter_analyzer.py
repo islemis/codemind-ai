@@ -5,9 +5,17 @@ from tree_sitter_language_pack import get_parser
 from backend.analyzers.language_config import LANGUAGES, NODE_TYPES
 from backend.analyzers.file_scanner import scan_project_files
 
+
 IGNORED_DIRS = {
     ".git", ".venv", "venv", "node_modules",
     "__pycache__", "dist", "build"
+}
+
+# Import nodes for Python, Java, JavaScript and TypeScript
+IMPORT_NODE_TYPES = {
+    "import_statement",
+    "import_from_statement",
+    "import_declaration"
 }
 
 
@@ -37,13 +45,13 @@ def get_parent_class(node, source):
 def analyze_repository(project_path: str):
     root = Path(project_path).resolve()
     components = []
+
     for file_path in scan_project_files(root):
         if not file_path.is_file():
             continue
 
         relative_path = file_path.relative_to(root)
 
-        # Skip generated and dependency directories
         if any(part in IGNORED_DIRS for part in relative_path.parts):
             continue
 
@@ -62,15 +70,23 @@ def analyze_repository(project_path: str):
 
             stack = [tree.root_node]
 
+            # Collect imports separately for this file
+            import_nodes = []
+
             while stack:
                 node = stack.pop()
+
+                # Group imports instead of creating one chunk each
+                if node.type in IMPORT_NODE_TYPES:
+                    import_nodes.append(node)
+                    continue
+
                 component_type = NODE_TYPES[language].get(node.type)
 
                 if component_type:
                     name = get_node_name(node, source)
                     parent_class = get_parent_class(node, source)
 
-                    # Identify Python methods inside classes
                     if (
                         language == "python"
                         and component_type == "function"
@@ -78,12 +94,10 @@ def analyze_repository(project_path: str):
                     ):
                         component_type = "method"
 
-                    # Use the full syntax node range
                     start_byte = node.start_byte
                     end_byte = node.end_byte
                     end_line = node.end_point.row + 1
 
-                    # Include the complete Python class body
                     if (
                         language == "python"
                         and node.type == "class_definition"
@@ -110,6 +124,28 @@ def analyze_repository(project_path: str):
                     })
 
                 stack.extend(reversed(node.named_children))
+
+            # Create ONE import chunk per file
+            if import_nodes:
+                import_nodes.sort(key=lambda node: node.start_byte)
+
+                imports_code = "\n".join(
+                    source[
+                        node.start_byte:node.end_byte
+                    ].decode("utf-8", errors="replace")
+                    for node in import_nodes
+                )
+
+                components.append({
+                    "file": relative_path.as_posix(),
+                    "language": language,
+                    "name": "imports",
+                    "type": "import",
+                    "parent_class": None,
+                    "start_line": import_nodes[0].start_point.row + 1,
+                    "end_line": import_nodes[-1].end_point.row + 1,
+                    "code": imports_code,
+                })
 
         except (OSError, ValueError, RuntimeError) as error:
             print(f"Could not analyze {relative_path}: {error}")

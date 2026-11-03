@@ -75,6 +75,9 @@ def chat_with_code(project_path: str, question: str, top_k: int = 5):
     seen = set()
 
     for message in result["messages"]:
+        for call in getattr(message, "tool_calls", []) or []:
+            print("TOOL:", call["name"])
+            print("ARGS:", call["args"])
         if not isinstance(message, ToolMessage):
             continue
 

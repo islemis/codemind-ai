@@ -29,23 +29,6 @@ def home():
     return {"message": "CodeMind AI is running"}
 
 
-@app.post("/projects/import")
-def import_local_project(request: ProjectRequest):
-    try:
-        project = load_local_project(request.project_path)
-        components = analyze_repository(project["project_path"])
-        components += analyze_documents(project["project_path"])
-
-        return {
-            "message": "Project analyzed successfully",
-            "project_name": project["project_name"],
-            "total_components": len(components),
-            "components": components[:20]
-        }
-
-    except ValueError as error:
-        raise HTTPException(status_code=400, detail=str(error))
-
 
 @app.post("/projects/index")
 def index_local_project(request: ProjectRequest):

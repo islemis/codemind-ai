@@ -1,6 +1,5 @@
 
 import json
-import re
 from pathlib import Path
 
 from langchain_core.tools import tool
@@ -9,9 +8,7 @@ from backend.analyzers.file_scanner import scan_project_files
 from backend.services.qdrant_service import search_components
 
 
-SECRET_PATTERN = re.compile(
-    r"(?im)^\s*[\w.-]*(?:password|secret|token|api[_-]?key|credential)[\w.-]*\s*[:=]\s*\S+"
-)
+
 
 
 def build_project_tools(project_path: str, top_k: int = 5):
@@ -49,8 +46,8 @@ def build_project_tools(project_path: str, top_k: int = 5):
         except OSError:
             return "Could not read file."
 
-        if "\x00" in text or SECRET_PATTERN.search(text):
-            return "File blocked: binary or potentially sensitive content."
+        if "\x00" in text:
+            return "File blocked: binary  content."
 
         lines = text.splitlines()
 
@@ -91,8 +88,7 @@ def build_project_tools(project_path: str, top_k: int = 5):
 
             code = item.get("code", "")
 
-            if SECRET_PATTERN.search(code):
-                continue
+           
 
             safe_results.append({
                 "file": item["file"],
