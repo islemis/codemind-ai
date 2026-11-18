@@ -1,41 +1,55 @@
 
 import json
-import re
 from pathlib import Path
 from qdrant_client import QdrantClient
 
 COLLECTION = "codemind_code"
+PROJECT_PATH = "C:/Users/ASUS/Desktop/projects/AlloService/AlloService-main"
 FOLDER = Path(__file__).parent
-N = 5  # 5 mots consécutifs en commun
 
 
-def words(text):
-    return re.sub(r"\s+", " ", text).strip().split()
+def normalize(text):
+    return "".join(str(text).split())
 
 
-def ngrams(text):
-    w = words(text)
-    return {" ".join(w[i:i + N]) for i in range(len(w) - N + 1)}
+def is_relevant(evidence, payload):
 
+    # Vérifier le fichier source
+    file = str(payload.get("file", "")).replace("\\", "/")
 
-def is_relevant(passage, chunk):
-    # Vérifier si le chunk contient le passage
-    compact = lambda text: re.sub(r"\s+", "", text)
+    if file != evidence["source"]:
+        return False
 
-    return (
-        compact(passage) in compact(chunk)
-        or bool(ngrams(passage) & ngrams(chunk))
-    )
+    # Vérifier les lignes
+    start = payload.get("start_line")
+    end = payload.get("end_line")
+
+    if start is None or end is None:
+        return False
+
+    if start > evidence["end_line"] or end < evidence["start_line"]:
+        return False
+
+    # Vérifier que le chunk contient une partie du passage
+    chunk_code = normalize(payload.get("code", ""))
+
+    lines = [
+        normalize(line)
+        for line in evidence["passage"].splitlines()
+        if len(normalize(line)) >= 12
+    ]
+
+    return any(line in chunk_code for line in lines)
 
 
 # 1. Connexion Qdrant
-client = QdrantClient("localhost", port=6333)
+client = QdrantClient(url="http://localhost:6333")
 
-# 2. Charger les 70 questions
-with open(FOLDER / "questions.jsonl", encoding="utf-8") as f:
+# 2. Charger les questions
+with open(FOLDER / "question_v2.jsonl", encoding="utf-8") as f:
     questions = [json.loads(line) for line in f if line.strip()]
 
-# 3. Récupérer les chunks et leurs vrais IDs
+# 3. Récupérer tous les chunks Qdrant
 chunks = []
 offset = None
 
@@ -53,37 +67,39 @@ while True:
     if offset is None:
         break
 
+# Garder uniquement les chunks d'AlloService
+chunks = [
+    chunk for chunk in chunks
+    if str((chunk.payload or {}).get("project_path", "")).replace("\\", "/").lower().rstrip("/")
+    == PROJECT_PATH.lower().rstrip("/")
+]
+
+if not chunks:
+    raise ValueError("No chunks found for AlloService.")
+
 # 4. Construire les Qrels
 qrels = {}
 
 for q in questions:
-    relevant_ids = []
 
-    for chunk in chunks:
-        data = chunk.payload or {}
+    relevant_ids = set()
 
-        # Vérifier le fichier source
-        if data.get("file", "").replace("\\", "/") != q["source"]:
-            continue
+    # Une question peut avoir plusieurs passages de référence
+    for evidence in q["evidence"]:
 
-        # Vérifier les lignes correspondantes
-        start = data.get("start_line")
-        end = data.get("end_line")
+        for chunk in chunks:
+            if is_relevant(evidence, chunk.payload or {}):
+                relevant_ids.add(str(chunk.id))
 
-        if start is not None and end is not None:
-            if start > q["end_line"] or end < q["start_line"]:
-                continue
+    qrels[q["query_id"]] = sorted(relevant_ids)
 
-        # Vérifier le passage dans le chunk
-        if is_relevant(q["passage"], data.get("code", "")):
-            relevant_ids.append(str(chunk.id))
+    print(
+        f"{q['query_id']}: "
+        f"{len(relevant_ids)} relevant chunks"
+    )
 
-    qrels[q["query_id"]] = relevant_ids
-
-    print(q["query_id"], ":", len(relevant_ids), "chunks")
-
-# 5. Sauvegarder les Qrels
+# 5. Sauvegarder
 with open(FOLDER / "qrels.json", "w", encoding="utf-8") as f:
     json.dump(qrels, f, indent=2)
 
-print("Qrels saved successfully!")
+print("\nQrels saved successfully!")

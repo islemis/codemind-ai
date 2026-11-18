@@ -23,7 +23,7 @@ PROJECT_PATH = (
 )
 
 # 1. Charger les questions et Qrels
-with open(FOLDER / "questions.jsonl", encoding="utf-8") as f:
+with open(FOLDER / "question_v2.jsonl", encoding="utf-8") as f:
     questions = [
         json.loads(line)
         for line in f if line.strip()
@@ -164,7 +164,7 @@ output = {
     "details": results
 }
 
-with open(FOLDER / "results"/ "results.json", "w", encoding="utf-8") as f:
+with open(FOLDER / "results"/ "results_v2.json", "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2)
 
 print("\nSaved benchmarks/results.json")
