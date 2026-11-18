@@ -39,4 +39,4 @@ def generate_embeddings(texts: list[str]):
 
 
 def get_embedding_dimension():
-    return get_model().get_sentence_embedding_dimension()
+    return get_model().get_embedding_dimension()
