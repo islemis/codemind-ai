@@ -1,0 +1,1139 @@
+{
+  "method": "bm25",
+  "collection": "codemind_code_hybrid",
+  "k": 5,
+  "rerank_candidates": null,
+  "reranker": null,
+  "evaluated": 70,
+  "skipped": 0,
+  "metrics": {
+    "precision": 0.17142857142857143,
+    "recall": 0.34095238095238095,
+    "mrr": 0.4319047619047619,
+    "ndcg": 0.3109307125000704,
+    "hit_rate": 0.6428571428571429,
+    "latency": 0.04040965714292335
+  },
+  "details": [
+    {
+      "query_id": "Q001",
+      "retrieved_ids": [
+        "d1a86f40-d685-5326-9657-8c878b5f2dcf",
+        "47e3ede7-2f6c-5b20-8f42-4f0ca376a3f7",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "e44d895a-ac99-5683-a20e-9b34e50b08c4",
+        "d7f73a7a-335f-58d9-ba46-713541f44131"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "mrr": 1.0,
+      "ndcg": 0.7653606369886217,
+      "hit_rate": 1,
+      "latency": 0.051428499980829656
+    },
+    {
+      "query_id": "Q002",
+      "retrieved_ids": [
+        "4edafa53-beea-5dcf-aed1-c7b46ca455f2",
+        "d1a86f40-d685-5326-9657-8c878b5f2dcf",
+        "9fea2d04-727d-54ba-bc33-c49df7c85e00",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "587108c3-08b6-5459-904d-9618d6d3bc3e"
+      ],
+      "precision": 0.6,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 0.9469024295259745,
+      "hit_rate": 1,
+      "latency": 0.037870500003919005
+    },
+    {
+      "query_id": "Q003",
+      "retrieved_ids": [
+        "4edafa53-beea-5dcf-aed1-c7b46ca455f2",
+        "47e3ede7-2f6c-5b20-8f42-4f0ca376a3f7",
+        "d1a86f40-d685-5326-9657-8c878b5f2dcf",
+        "fdab8592-3b04-5ffa-b955-db207630017e",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "mrr": 1.0,
+      "ndcg": 0.7039180890341347,
+      "hit_rate": 1,
+      "latency": 0.041135800012853
+    },
+    {
+      "query_id": "Q004",
+      "retrieved_ids": [
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.0457462000194937
+    },
+    {
+      "query_id": "Q005",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "fdab8592-3b04-5ffa-b955-db207630017e",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "549df2b8-9bf0-5428-9808-3c290c77470a"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.06490259998827241
+    },
+    {
+      "query_id": "Q006",
+      "retrieved_ids": [
+        "2a4cdc2b-6ba8-5e65-8be1-de8f93deb808",
+        "8464a273-eb1f-5edb-b55e-dcff1c05ed6f",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.06322689997614361
+    },
+    {
+      "query_id": "Q007",
+      "retrieved_ids": [
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "4edafa53-beea-5dcf-aed1-c7b46ca455f2",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.3333333333333333,
+      "ndcg": 0.3065735963827292,
+      "hit_rate": 1,
+      "latency": 0.06966579999425448
+    },
+    {
+      "query_id": "Q008",
+      "retrieved_ids": [
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "4edafa53-beea-5dcf-aed1-c7b46ca455f2",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.3333333333333333,
+      "ndcg": 0.3065735963827292,
+      "hit_rate": 1,
+      "latency": 0.05826960000558756
+    },
+    {
+      "query_id": "Q009",
+      "retrieved_ids": [
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "fdab8592-3b04-5ffa-b955-db207630017e",
+        "9fea2d04-727d-54ba-bc33-c49df7c85e00"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.02253200000268407
+    },
+    {
+      "query_id": "Q010",
+      "retrieved_ids": [
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "9fea2d04-727d-54ba-bc33-c49df7c85e00",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.03706209998927079
+    },
+    {
+      "query_id": "Q011",
+      "retrieved_ids": [
+        "587108c3-08b6-5459-904d-9618d6d3bc3e",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.02192009999998845
+    },
+    {
+      "query_id": "Q012",
+      "retrieved_ids": [
+        "9fea2d04-727d-54ba-bc33-c49df7c85e00",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "587108c3-08b6-5459-904d-9618d6d3bc3e",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.3333333333333333,
+      "ndcg": 0.3065735963827292,
+      "hit_rate": 1,
+      "latency": 0.03936450000037439
+    },
+    {
+      "query_id": "Q013",
+      "retrieved_ids": [
+        "bd69d171-80af-5dab-bd4a-b7912d9e59e5",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "d1c8fb9e-8118-523c-8309-2865a00b44e7",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "49189d61-3d21-5b1e-8862-7414ec1793c8"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.0236391999933403
+    },
+    {
+      "query_id": "Q014",
+      "retrieved_ids": [
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "815dead3-d050-5d5b-a7e2-c5f5ad2a5408",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 0.3333333333333333,
+      "ndcg": 0.23463936301137822,
+      "hit_rate": 1,
+      "latency": 0.038370000023860484
+    },
+    {
+      "query_id": "Q015",
+      "retrieved_ids": [
+        "587108c3-08b6-5459-904d-9618d6d3bc3e",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "815dead3-d050-5d5b-a7e2-c5f5ad2a5408"
+      ],
+      "precision": 0.4,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 0.8503449055347546,
+      "hit_rate": 1,
+      "latency": 0.027228299994021654
+    },
+    {
+      "query_id": "Q016",
+      "retrieved_ids": [
+        "587108c3-08b6-5459-904d-9618d6d3bc3e",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963",
+        "fdab8592-3b04-5ffa-b955-db207630017e",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.030557299993233755
+    },
+    {
+      "query_id": "Q017",
+      "retrieved_ids": [
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "9fea2d04-727d-54ba-bc33-c49df7c85e00",
+        "e2023ef8-4b15-5d3b-8bb5-b76b9681cf21"
+      ],
+      "precision": 0.2,
+      "recall": 0.2,
+      "mrr": 0.25,
+      "ndcg": 0.14606834984270645,
+      "hit_rate": 1,
+      "latency": 0.036633600015193224
+    },
+    {
+      "query_id": "Q018",
+      "retrieved_ids": [
+        "9fea2d04-727d-54ba-bc33-c49df7c85e00",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.03311930000199936
+    },
+    {
+      "query_id": "Q019",
+      "retrieved_ids": [
+        "bd69d171-80af-5dab-bd4a-b7912d9e59e5",
+        "f0f4eb96-b28d-58ce-a6ae-71716362b0db",
+        "e2023ef8-4b15-5d3b-8bb5-b76b9681cf21",
+        "0d776755-81a5-50e3-9513-1d24582ce2cb",
+        "d1c8fb9e-8118-523c-8309-2865a00b44e7"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.25,
+      "ndcg": 0.2640681225725909,
+      "hit_rate": 1,
+      "latency": 0.026884799997787923
+    },
+    {
+      "query_id": "Q020",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "549df2b8-9bf0-5428-9808-3c290c77470a",
+        "b3e36286-0cce-5b81-9396-a00196183e5d"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.5,
+      "ndcg": 0.38685280723454163,
+      "hit_rate": 1,
+      "latency": 0.027364200010197237
+    },
+    {
+      "query_id": "Q021",
+      "retrieved_ids": [
+        "bd69d171-80af-5dab-bd4a-b7912d9e59e5",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "f0f4eb96-b28d-58ce-a6ae-71716362b0db",
+        "e44d895a-ac99-5683-a20e-9b34e50b08c4",
+        "d1a86f40-d685-5326-9657-8c878b5f2dcf"
+      ],
+      "precision": 0.4,
+      "recall": 1.0,
+      "mrr": 0.25,
+      "ndcg": 0.5012658353418871,
+      "hit_rate": 1,
+      "latency": 0.043899000011151657
+    },
+    {
+      "query_id": "Q022",
+      "retrieved_ids": [
+        "9fea2d04-727d-54ba-bc33-c49df7c85e00",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.024933200009400025
+    },
+    {
+      "query_id": "Q023",
+      "retrieved_ids": [
+        "300d963c-789b-5973-bdcf-035cdf8fee98",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963",
+        "fdab8592-3b04-5ffa-b955-db207630017e"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.029263599979458377
+    },
+    {
+      "query_id": "Q024",
+      "retrieved_ids": [
+        "587108c3-08b6-5459-904d-9618d6d3bc3e",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "2e923fd6-808d-5a0b-a9b8-f2589c614a4c",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg": 0.46927872602275644,
+      "hit_rate": 1,
+      "latency": 0.020504499989328906
+    },
+    {
+      "query_id": "Q025",
+      "retrieved_ids": [
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "815dead3-d050-5d5b-a7e2-c5f5ad2a5408"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.040857399988453835
+    },
+    {
+      "query_id": "Q026",
+      "retrieved_ids": [
+        "4edafa53-beea-5dcf-aed1-c7b46ca455f2",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.05231639998964965
+    },
+    {
+      "query_id": "Q027",
+      "retrieved_ids": [
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.06166239999583922
+    },
+    {
+      "query_id": "Q028",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "549df2b8-9bf0-5428-9808-3c290c77470a"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.02894620000733994
+    },
+    {
+      "query_id": "Q029",
+      "retrieved_ids": [
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963",
+        "fdab8592-3b04-5ffa-b955-db207630017e"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.02859199998783879
+    },
+    {
+      "query_id": "Q030",
+      "retrieved_ids": [
+        "e2023ef8-4b15-5d3b-8bb5-b76b9681cf21",
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.04008470001281239
+    },
+    {
+      "query_id": "Q031",
+      "retrieved_ids": [
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "70c4229f-150d-5cb2-8cfa-dc290096e3f3",
+        "fc8a496f-a4ee-5bdb-9d52-20b44fde4d13",
+        "d1a86f40-d685-5326-9657-8c878b5f2dcf"
+      ],
+      "precision": 0.4,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 0.9197207891481876,
+      "hit_rate": 1,
+      "latency": 0.04990449998877011
+    },
+    {
+      "query_id": "Q032",
+      "retrieved_ids": [
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "e44d895a-ac99-5683-a20e-9b34e50b08c4",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg": 0.46927872602275644,
+      "hit_rate": 1,
+      "latency": 0.031256799993570894
+    },
+    {
+      "query_id": "Q033",
+      "retrieved_ids": [
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "70c4229f-150d-5cb2-8cfa-dc290096e3f3",
+        "7ef44268-a255-5c7b-9e08-7cdbc8f969c7",
+        "e425e0cf-d1e6-52ca-b69d-34547bf2bf22",
+        "e44d895a-ac99-5683-a20e-9b34e50b08c4"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "mrr": 1.0,
+      "ndcg": 0.7653606369886217,
+      "hit_rate": 1,
+      "latency": 0.03166599999531172
+    },
+    {
+      "query_id": "Q034",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.031741000013425946
+    },
+    {
+      "query_id": "Q035",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg": 0.46927872602275644,
+      "hit_rate": 1,
+      "latency": 0.05489480000687763
+    },
+    {
+      "query_id": "Q036",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "70c4229f-150d-5cb2-8cfa-dc290096e3f3",
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "ca3d350d-13a5-5fb6-9b17-03d9d6f95b9e"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.5,
+      "ndcg": 0.38685280723454163,
+      "hit_rate": 1,
+      "latency": 0.03633039997657761
+    },
+    {
+      "query_id": "Q037",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "608eb757-6681-5ad3-8acb-41d6132becf5"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.030748099990887567
+    },
+    {
+      "query_id": "Q038",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.02955050001037307
+    },
+    {
+      "query_id": "Q039",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "815dead3-d050-5d5b-a7e2-c5f5ad2a5408",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 0.25,
+      "ndcg": 0.20210734650054757,
+      "hit_rate": 1,
+      "latency": 0.10456740000518039
+    },
+    {
+      "query_id": "Q040",
+      "retrieved_ids": [
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "70c4229f-150d-5cb2-8cfa-dc290096e3f3",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "608eb757-6681-5ad3-8acb-41d6132becf5"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.3333333333333333,
+      "ndcg": 0.3065735963827292,
+      "hit_rate": 1,
+      "latency": 0.08153970001148991
+    },
+    {
+      "query_id": "Q041",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 1.0,
+      "ndcg": 0.6131471927654584,
+      "hit_rate": 1,
+      "latency": 0.05633309998665936
+    },
+    {
+      "query_id": "Q042",
+      "retrieved_ids": [
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.06334490000153892
+    },
+    {
+      "query_id": "Q043",
+      "retrieved_ids": [
+        "4edafa53-beea-5dcf-aed1-c7b46ca455f2",
+        "70c4229f-150d-5cb2-8cfa-dc290096e3f3",
+        "47e3ede7-2f6c-5b20-8f42-4f0ca376a3f7",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "d7f73a7a-335f-58d9-ba46-713541f44131"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "mrr": 0.5,
+      "ndcg": 0.5307212739772434,
+      "hit_rate": 1,
+      "latency": 0.03310780000174418
+    },
+    {
+      "query_id": "Q044",
+      "retrieved_ids": [
+        "7ef44268-a255-5c7b-9e08-7cdbc8f969c7",
+        "4659933b-fdfb-5256-8854-f8650f0f1bff",
+        "dd6a1499-a06f-553e-8900-f4de8d6a23d4",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "ad66800f-b0f6-5ae5-9fff-43356c048034"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg": 0.46927872602275644,
+      "hit_rate": 1,
+      "latency": 0.057704600010765716
+    },
+    {
+      "query_id": "Q045",
+      "retrieved_ids": [
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "2a4cdc2b-6ba8-5e65-8be1-de8f93deb808",
+        "6fa50d5b-2197-5980-ab87-c6a0a4a602fa",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.25,
+      "ndcg": 0.2640681225725909,
+      "hit_rate": 1,
+      "latency": 0.03199529999983497
+    },
+    {
+      "query_id": "Q046",
+      "retrieved_ids": [
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "4659933b-fdfb-5256-8854-f8650f0f1bff",
+        "83a7a915-5111-5c44-bf6c-b2ec6aecb013",
+        "7ef44268-a255-5c7b-9e08-7cdbc8f969c7",
+        "608eb757-6681-5ad3-8acb-41d6132becf5"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.25,
+      "ndcg": 0.2640681225725909,
+      "hit_rate": 1,
+      "latency": 0.04325210000388324
+    },
+    {
+      "query_id": "Q047",
+      "retrieved_ids": [
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.04783180000958964
+    },
+    {
+      "query_id": "Q048",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.042629299976397306
+    },
+    {
+      "query_id": "Q049",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "fdab8592-3b04-5ffa-b955-db207630017e",
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.028575400006957352
+    },
+    {
+      "query_id": "Q050",
+      "retrieved_ids": [
+        "9d8f84d1-589b-5462-941c-ad2d6b11c8b0",
+        "7b0d4648-9e3d-54ad-b6f9-99ed82224a94",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "6fa50d5b-2197-5980-ab87-c6a0a4a602fa",
+        "4659933b-fdfb-5256-8854-f8650f0f1bff"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 1.0,
+      "ndcg": 0.46927872602275644,
+      "hit_rate": 1,
+      "latency": 0.03362090000882745
+    },
+    {
+      "query_id": "Q051",
+      "retrieved_ids": [
+        "bed2bc71-8c4f-5f92-9fde-3e9750bca4c5",
+        "ad9659ea-0c9a-5b64-a0f0-c28d77831f91",
+        "83a7a915-5111-5c44-bf6c-b2ec6aecb013",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "fdab8592-3b04-5ffa-b955-db207630017e"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "mrr": 1.0,
+      "ndcg": 0.7653606369886217,
+      "hit_rate": 1,
+      "latency": 0.03012260000105016
+    },
+    {
+      "query_id": "Q052",
+      "retrieved_ids": [
+        "fc8a496f-a4ee-5bdb-9d52-20b44fde4d13",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "d1a86f40-d685-5326-9657-8c878b5f2dcf",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "e44d895a-ac99-5683-a20e-9b34e50b08c4"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.035207999986596406
+    },
+    {
+      "query_id": "Q053",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "6fa50d5b-2197-5980-ab87-c6a0a4a602fa",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "83a7a915-5111-5c44-bf6c-b2ec6aecb013",
+        "8464a273-eb1f-5edb-b55e-dcff1c05ed6f"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.03426020001643337
+    },
+    {
+      "query_id": "Q054",
+      "retrieved_ids": [
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "bed2bc71-8c4f-5f92-9fde-3e9750bca4c5",
+        "ad9659ea-0c9a-5b64-a0f0-c28d77831f91",
+        "4da893fa-4a41-52d7-ba08-a3bc63ccd779"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.2,
+      "ndcg": 0.23719771276929622,
+      "hit_rate": 1,
+      "latency": 0.034214100014651194
+    },
+    {
+      "query_id": "Q055",
+      "retrieved_ids": [
+        "8464a273-eb1f-5edb-b55e-dcff1c05ed6f",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "2a4cdc2b-6ba8-5e65-8be1-de8f93deb808",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.041002900019520894
+    },
+    {
+      "query_id": "Q056",
+      "retrieved_ids": [
+        "fc8a496f-a4ee-5bdb-9d52-20b44fde4d13",
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "7ef44268-a255-5c7b-9e08-7cdbc8f969c7",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.02665849999175407
+    },
+    {
+      "query_id": "Q057",
+      "retrieved_ids": [
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "70c4229f-150d-5cb2-8cfa-dc290096e3f3",
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "83a7a915-5111-5c44-bf6c-b2ec6aecb013"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.05080530000850558
+    },
+    {
+      "query_id": "Q058",
+      "retrieved_ids": [
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "4da893fa-4a41-52d7-ba08-a3bc63ccd779",
+        "bed2bc71-8c4f-5f92-9fde-3e9750bca4c5",
+        "6061a90a-7217-5789-ba90-03f91e15f8dd",
+        "fc8a496f-a4ee-5bdb-9d52-20b44fde4d13"
+      ],
+      "precision": 0.6,
+      "recall": 0.75,
+      "mrr": 0.5,
+      "ndcg": 0.6096199500078984,
+      "hit_rate": 1,
+      "latency": 0.02644089999375865
+    },
+    {
+      "query_id": "Q059",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92",
+        "125218c2-36e2-5e1f-82c9-8e0878025dff",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.03901999999652617
+    },
+    {
+      "query_id": "Q060",
+      "retrieved_ids": [
+        "bed2bc71-8c4f-5f92-9fde-3e9750bca4c5",
+        "2a4cdc2b-6ba8-5e65-8be1-de8f93deb808",
+        "ad9659ea-0c9a-5b64-a0f0-c28d77831f91",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "6061a90a-7217-5789-ba90-03f91e15f8dd"
+      ],
+      "precision": 0.6,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 0.8854598815714874,
+      "hit_rate": 1,
+      "latency": 0.032553199998801574
+    },
+    {
+      "query_id": "Q061",
+      "retrieved_ids": [
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "fc8a496f-a4ee-5bdb-9d52-20b44fde4d13",
+        "bed2bc71-8c4f-5f92-9fde-3e9750bca4c5"
+      ],
+      "precision": 0.2,
+      "recall": 0.5,
+      "mrr": 0.2,
+      "ndcg": 0.23719771276929622,
+      "hit_rate": 1,
+      "latency": 0.036802499991608784
+    },
+    {
+      "query_id": "Q062",
+      "retrieved_ids": [
+        "7b0d4648-9e3d-54ad-b6f9-99ed82224a94",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac",
+        "bed2bc71-8c4f-5f92-9fde-3e9750bca4c5"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.03162910000537522
+    },
+    {
+      "query_id": "Q063",
+      "retrieved_ids": [
+        "7ef44268-a255-5c7b-9e08-7cdbc8f969c7",
+        "608eb757-6681-5ad3-8acb-41d6132becf5",
+        "fc8a496f-a4ee-5bdb-9d52-20b44fde4d13",
+        "e1078c4b-7db5-526e-b4e2-b184186d29aa",
+        "6ebffbf9-5d41-5956-a936-5d85e4ca7b92"
+      ],
+      "precision": 0.2,
+      "recall": 0.25,
+      "mrr": 0.25,
+      "ndcg": 0.16812753627111746,
+      "hit_rate": 1,
+      "latency": 0.05917379999300465
+    },
+    {
+      "query_id": "Q064",
+      "retrieved_ids": [
+        "dd6a1499-a06f-553e-8900-f4de8d6a23d4",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "4659933b-fdfb-5256-8854-f8650f0f1bff",
+        "ad66800f-b0f6-5ae5-9fff-43356c048034"
+      ],
+      "precision": 0.4,
+      "recall": 0.6666666666666666,
+      "mrr": 1.0,
+      "ndcg": 0.6713860725233041,
+      "hit_rate": 1,
+      "latency": 0.0581475000071805
+    },
+    {
+      "query_id": "Q065",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963",
+        "fdab8592-3b04-5ffa-b955-db207630017e",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.02374549998785369
+    },
+    {
+      "query_id": "Q066",
+      "retrieved_ids": [
+        "bed2bc71-8c4f-5f92-9fde-3e9750bca4c5",
+        "ad9659ea-0c9a-5b64-a0f0-c28d77831f91",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 0.5,
+      "ndcg": 0.2960819109658652,
+      "hit_rate": 1,
+      "latency": 0.028923000005306676
+    },
+    {
+      "query_id": "Q067",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "3f865bf8-657e-5015-8e42-df1fbdf96695",
+        "750d93af-8bec-53c0-a064-c2d6618f02ac"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 0.25,
+      "ndcg": 0.20210734650054757,
+      "hit_rate": 1,
+      "latency": 0.03837850000127219
+    },
+    {
+      "query_id": "Q068",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "3f865bf8-657e-5015-8e42-df1fbdf96695",
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 0.3333333333333333,
+      "ndcg": 0.23463936301137822,
+      "hit_rate": 1,
+      "latency": 0.02973139999085106
+    },
+    {
+      "query_id": "Q069",
+      "retrieved_ids": [
+        "f85fd896-73d7-5be6-a716-31b8720afc9c",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "b5378c69-3e63-5dfe-91db-d63adf243ba4",
+        "3f865bf8-657e-5015-8e42-df1fbdf96695",
+        "fdab8592-3b04-5ffa-b955-db207630017e"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "mrr": 0.0,
+      "ndcg": 0.0,
+      "hit_rate": 0,
+      "latency": 0.0444642000074964
+    },
+    {
+      "query_id": "Q070",
+      "retrieved_ids": [
+        "f1a56887-7980-55c8-bfa6-c36458b5ed8f",
+        "ff8e7161-1abc-5d51-abe4-ed4dc926cf70",
+        "b3e36286-0cce-5b81-9396-a00196183e5d",
+        "26153bf2-2873-5dc4-afee-547ec6ac6963",
+        "f85fd896-73d7-5be6-a716-31b8720afc9c"
+      ],
+      "precision": 0.2,
+      "recall": 0.3333333333333333,
+      "mrr": 0.3333333333333333,
+      "ndcg": 0.23463936301137822,
+      "hit_rate": 1,
+      "latency": 0.03881970001384616
+    }
+  ]
+}
