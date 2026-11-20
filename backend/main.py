@@ -29,13 +29,13 @@ class ProjectRequest(BaseModel):
 # Modèle pour rechercher dans Qdrant
 class SearchRequest(ProjectRequest):
     query: str
-    top_k: int = Field(default=7, ge=1, le=20)
+    top_k: int = Field(default=5, ge=1, le=20)
 
 
 # Modèle pour poser une question au chatbot
 class ChatRequest(ProjectRequest):
     question: str
-    top_k: int = Field(default=7, ge=1, le=20)
+    top_k: int = Field(default=5, ge=1, le=20)
 
 
 # Vérifier que l'API fonctionne
