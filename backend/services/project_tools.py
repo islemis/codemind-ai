@@ -11,7 +11,7 @@ from backend.services.qdrant_service import search_components
 
 
 
-def build_project_tools(project_path: str, top_k: int = 5):
+def build_project_tools(project_path: str, top_k: int = 7):
     root = Path(project_path).resolve()
 
     # Only allow files selected by our scanner
