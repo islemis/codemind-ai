@@ -33,7 +33,7 @@ llm = ChatGoogleGenerativeAI(
 MAX_TOOL_ROUNDS = 3
 
 
-def chat_with_code(project_path: str, question: str, top_k: int = 5):
+def chat_with_code(project_path: str, question: str, top_k: int = 7):
 
     if not question.strip():
         raise ValueError("Question cannot be empty.")
